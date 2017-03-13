@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Analytics Template</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="grid-view.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body id="light-grey">
+		<!-- Top container -->
+		<div class="top-container clearfix">
+			<button class="mobile-nav-btn" onclick="open()"><i class="fa fa-bars"></i>&nbsp;Menu
+			</button>
+			<span class="logo">Logo</span>
+		</div>
+		<!-- Sidenav/menu -->
+		<nav class="sidenav animate-left" id="mySideNav">
+			<div class="user-info clearfix">
+				<div class="col-4 col">
+					<img src="http://www.w3schools.com/w3images/avatar2.png" class="avatar">
+				</div>
+				<div class="col-8 col"><span>Welcome, <strong>Mike</strong></span><br>
+					<a href="#" class="social-media-icons"><i class="fa fa-envelope"></i></a>
+					<a href="#" class="social-media-icons"><i class="fa fa-user"></i></a>
+					<a href="#" class="social-media-icons"><i class="fa fa-cog"></i></a>
+				</div>
+			<hr>
+			<div class="container-dashboard clearfix">
+				<h5>Dashboard</h5>
+			</div>
+				<a href="#" id="mobile-close-btn" onclick="close()" title="close menu"><i class="fa fa-remove fa-fw"></i>&nbsp; Close Menu</a>
+				<a href="#" class="dashboard-btn"><i class="fa fa-users fa-fw"></i>&nbsp; Overview</a>
+				<a href="#" class="dashboard-btn"><i class="fa fa-eye fa-fw"></i>&nbsp; Views</a>
+				<a href="#" class="dashboard-btn"><i class="fa fa-users fa-fw"></i>&nbsp; Traffic</a>
+				<a href="#" class="dashboard-btn"><i class="fa fa-bullseye fa-fw"></i>&nbsp; Geo</a>
+				<a href="#" class="dashboard-btn"><i class="fa fa-diamond fa-fw"></i>&nbsp; Orders</a>
+				<a href="#" class="dashboard-btn"><i class="fa fa-bell fa-fw"></i>&nbsp; News</a>
+				<a href="#" class="dashboard-btn"><i class="fa fa-bank fa-fw"></i>&nbsp; General</a>
+				<a href="#" class="dashboard-btn"><i class="fa fa-history fa-fw"></i>&nbsp; History</a>
+				<a href="#" class="dashboard-btn"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+		</nav>
+		<!-- Overlay effect when opening sidenav on small screens -->
+		<div class="sidenav-animate" onclick="close()" style="cursor: pointer; display: none;" title="close side menu" id="myOverlay"></div>
+		<!-- PAGE CONTENT -->
+		<div class="main">
+			<!-- Header -->
+			<header class="container clearfix"><b><h5><i class="fa fa-dashboard"></i> My Dashboard</h5></b></header>
+			<div class="row clearfix">
+				<div class="quarter clearfix">
+					<div class="container color-container red">
+						<div class="left"><i class="fa fa-comment w3-xxxlarge"></i>
+						</div>
+						<div class="right">
+		       			<h3>52</h3>
+		     			</div>
+		     			<div class="clearfix"></div>
+		     			<h4>Messages</h4>
+					</div>
+				</div>
+				<div class="quarter">
+			      <div class="container color-container blue">
+			        	<div class="left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+			        	<div class="right">
+			          	<h3>99</h3>
+			        </div>
+			        <div class="clearfix"></div>
+			        <h4>Views</h4>
+			      </div>
+		    	</div>
+			   <div class="quarter">
+			      <div class="container color-container teal">
+			        	<div class="left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+			        	<div class="right">
+			          	<h3>23</h3>
+			        	</div>
+			        	<div class="clearfix"></div>
+			        	<h4>Shares</h4>
+			      </div>
+			   </div>
+			   <div class="quarter">
+			      <div class="container orange color-container">
+			        	<div class="left"><i class="fa fa-users w3-xxxlarge"></i></div>
+			        	<div class="right">
+			          	<h3>50</h3>
+			        	</div>
+			        <div class="clearfix"></div>
+			        <h4>Users</h4>
+			      </div>
+			   </div>
+			</div>
+			<div class="container clearfix section">
+				<div class="clearfix">
+					<div class="col-4 map">
+						<h5>Regions</h5>
+						<img src="http://www.w3schools.com/w3images/region.jpg" alt="Google Regional Map">
+					</div>
+					<div class="col-8 feeds">
+						<h5>Feeds</h5>
+						<table class="feeds-table">
+							<tbody>
+								<tr><td><i class="fa fa-user w3-blue w3-padding-tiny"></i></td><td>New record, over 90 views.</td><td><i>10 mins</i></td></tr>
+								<tr></tr>
+								<tr></tr>
+								<tr></tr>
+								<tr></tr>
+								<tr></tr>
+								<tr></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
