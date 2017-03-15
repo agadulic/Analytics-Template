@@ -190,7 +190,7 @@ div.main {
 
 /* Header */
 
-.container h5 {
+.container h5:not(.progress-text) {
 	margin-top: 20px;
 	font-family: inherit;
 }
@@ -239,9 +239,23 @@ div.main {
 	background-color: #ff9800;
 }
 
+/* News and Feeds */
+
 .section {
 	margin-top: 16px;
 	margin-bottom: 16px;
+}
+
+.map {
+	display: inline-block;
+	float: left;
+	margin-top: 10px;
+}
+
+.feeds {
+	display: inline-block;
+	float: left;
+	padding-left: 15px;
 }
 
 .map img {
@@ -251,12 +265,90 @@ div.main {
 
 .feeds {
 	float: left;
+	margin-top: 10px;
 }
 
 .feeds h5 {
 	margin-top: 10px;
 }
 
-tbody {
+.feeds-table {
+	width: 100%;
+}
+
+table {
+	border-top: 1px solid #fff;
 	border-collapse: collapse;
+}
+
+tr {
+	width: 100%;
+	padding: 8px;
+}
+
+tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+td {
+	padding: 8px 32px 8px 16px;
+}
+
+.padding-right {
+	padding-right: 48px;
+}
+
+.middle {
+	text-align: left;
+}
+
+/*Progress Bar*/
+
+.progress-text {
+	margin-bottom: 10px;
+	font-family: inherit;
+}
+
+.progress-text {
+	width: 90%;
+}
+
+.container2 p {
+	margin: 10px 0;
+}
+
+.progress-bar {
+	position: relative;
+  background-color: #fff;
+  padding: 15px 0;
+}
+
+.progressbar-full {
+	width: 100%;
+}
+
+.inner-bar {
+	overflow: hidden;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 5px;
+	color: #fff;
+}
+
+.red2 {
+	background-color: #f27768;
+	width: 80%;
+}
+
+.green {
+	background-color: #4CAF50;
+	width: 70%;
+}
+
+.yellow {
+	background-color: #ff9800;
+	width: 60%;
 }
