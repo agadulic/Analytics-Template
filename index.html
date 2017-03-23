@@ -150,7 +150,7 @@
 				<div class="wrapper-column">
 					<div class="progressbar-full">
 						<div class="progress-bar">
-							<div class="inner-bar red2" data-percent="80%">80%
+							<div class="inner-bar red2" data-percent="80%">
 							</div>
 						</div>
 						</div>
@@ -159,7 +159,7 @@
 					<div class="wrapper-column">
 						<div class="progressbar-full">
 						<div class="progress-bar">
-							<div class="inner-bar green" data-percent="70%">70%
+							<div class="inner-bar green" data-percent="70%">
 							</div>
 						</div>
 						</div>
@@ -168,7 +168,7 @@
 				<div class="wrapper-column margin-bottom">
 					<div class="progressbar-full">
 						<div class="progress-bar">
-							<div class="inner-bar yellow" data-percent="60%">60%
+							<div class="inner-bar yellow" data-percent="60%">
 							</div>
 						</div>
 						</div>
@@ -176,21 +176,15 @@
 				</div>
 			</section>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>
-		    $(window).on("scroll", function() {
-            var innerBar = $(".inner-bar");
-            var yScroll = window.pageYOffset;
-            var position = $("#progressbars").offset().top;
-
-            if (yScroll > position - 10) {
-
-                $.each(innerBar, function(index, value) {
-                    $(this).animate({
-                        width: $(this).data("percent")
-                    }, 1500);
-                });
-            }
-        });
+		    $(function(){
+            $('.inner-bar').each(function(){
+               $(this).animate({
+                   width: $(this).data('percent')
+							 }, 2000);
+						});
+				})
 		</script>
 	</body>
 </html>
