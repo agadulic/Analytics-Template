@@ -22,7 +22,7 @@
 				<div class="col-4 col">
 					<img src="http://www.w3schools.com/w3images/avatar2.png" class="avatar">
 				</div>
-				<div class="col-sm-8 col-m-8 col-lg-8"><span>Welcome, <strong>Mike</strong></span><br>
+				<div class="col-sm-12 col-m-12 col-lg-8"><span>Welcome, <strong>Mike</strong></span><br>
 					<a href="#" class="social-media-icons"><i class="fa fa-envelope"></i></a>
 					<a href="#" class="social-media-icons"><i class="fa fa-user"></i></a>
 					<a href="#" class="social-media-icons"><i class="fa fa-cog"></i></a>
@@ -98,7 +98,7 @@
 						<h5>Regions</h5>
 						<img src="http://www.w3schools.com/w3images/region.jpg" alt="Google Regional Map">
 					</div>
-					<div class="col-sm-12 col-m-12 col-lg-12 feeds">
+					<div class="col-sm-12 col-m-12 col-lg-8 feeds">
 						<h5>Feeds</h5>
 						<table class="feeds-table">
 							<tbody>
@@ -176,7 +176,8 @@
 				</div>
 			</section>
 		</div>
-		<script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!--<script>
 		    $(window).on("scroll", function() {
             var innerBar = $(".inner-bar");
             var yScroll = window.pageYOffset;
@@ -191,6 +192,15 @@
                 });
             }
         });
+		</script>-->
+		<script>
+					    $(function(){
+            $('.inner-bar').each(function(){
+               $(this).animate({
+                   width: $(this).data('percent')
+							 }, 2000);
+						});
+				})
 		</script>
 	</body>
 </html>

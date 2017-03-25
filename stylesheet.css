@@ -68,6 +68,12 @@
 	border-style: none;
 }
 
+hr {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
 .sidenav a:not(.social-media-icons) {
 	display: block;
 }
@@ -180,6 +186,10 @@ div.main {
 	font-family: inherit;
 }
 
+.color-container h3 {
+	font-size: 30px;
+}
+
 .color-container {
 	color: #fff;
 	padding: 16px;
@@ -213,29 +223,25 @@ div.main {
 
 .section {
 	margin-top: 16px;
-	margin-bottom: 16px;
 }
 
 .map {
 	display: inline-block;
-	float: left;
 	margin-top: 10px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .feeds {
 	display: inline-block;
-	float: left;
 	padding-left: 15px;
+	margin-top: 10px;
+	padding-right: 0;
 }
 
 .map img {
 	width: 100%;
 	border-style: none;
-}
-
-.feeds {
-	float: left;
-	margin-top: 10px;
 }
 
 .feeds h5 {
@@ -310,17 +316,14 @@ td {
 
 .red2 {
 	background-color: #f27768;
-	width: 80%;
 }
 
 .green {
 	background-color: #4CAF50;
-	width: 70%;
 }
 
 .yellow {
 	background-color: #ff9800;
-	width: 60%;
 }
 
 .margin-bottom {
