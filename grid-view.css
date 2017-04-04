@@ -15,11 +15,6 @@
 	clear: both;
 }
 
-#gray {
-	color: #000;
-	background-color: #f5f7f8;
-}
-
 [class^="col-"] {
 	float: left;
 }
@@ -39,7 +34,7 @@
 .col-sm-12{width: 100%}
 }
 
-@media (min-width: 601px) and (max-width: 749px) {
+@media (min-width: 601px) and (max-width: 998px) {
 .col-m-1 {width: 8%;}
 .col-m-2 {width: 16%;}
 .col-m-3 {width: 25%;}
@@ -55,7 +50,7 @@
 }
 
 
-@media (min-width:750px) {
+@media (min-width: 999px) {
 .col-lg-1{width: 8%}
 .col-lg-2{width: 16%}
 .col-lg-3{width: 25%}

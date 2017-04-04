@@ -12,14 +12,15 @@
 	<body id="light-grey">
 		<!-- Top container -->
 		<div class="top-container clearfix">
-			<button class="mobile-nav-btn" onclick="open()"><i class="fa fa-bars"></i>&nbsp;Menu
-			</button>
 			<span class="logo">Logo</span>
+			<button class="openbtn"></button>
 		</div>
 		<!-- Sidenav/menu -->
-		<nav class="sidenav animate-left" id="mySideNav">
+		<nav class="sidenav responsive" id="mySideNav">
+			<!-- Responsive Sinenav -->
+			<!-- End of Responsive Sidenav-->
 			<div class="user-info clearfix">
-				<div class="col-4 col">
+				<div>
 					<img src="http://www.w3schools.com/w3images/avatar2.png" class="avatar">
 				</div>
 				<div class="col-sm-12 col-m-12 col-lg-8"><span>Welcome, <strong>Mike</strong></span><br>
@@ -31,7 +32,6 @@
 			<div class="container-dashboard clearfix">
 				<h5>Dashboard</h5>
 			</div>
-				<a href="#" id="mobile-close-btn" onclick="close()" title="close menu"><i class="fa fa-remove fa-fw"></i>&nbsp; Close Menu</a>
 				<a href="#" class="dashboard-btn"><i class="fa fa-users fa-fw"></i>&nbsp; Overview</a>
 				<a href="#" class="dashboard-btn"><i class="fa fa-eye fa-fw"></i>&nbsp; Views</a>
 				<a href="#" class="dashboard-btn"><i class="fa fa-users fa-fw"></i>&nbsp; Traffic</a>
@@ -42,12 +42,10 @@
 				<a href="#" class="dashboard-btn"><i class="fa fa-history fa-fw"></i>&nbsp; History</a>
 				<a href="#" class="dashboard-btn"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
 		</nav>
-		<!-- Overlay effect when opening sidenav on small screens -->
-		<div class="sidenav-animate" onclick="close()" style="cursor: pointer; display: none;" title="close side menu" id="myOverlay"></div>
 		<!-- PAGE CONTENT -->
 		<div class="main">
 			<!-- Header -->
-			<header class="container clearfix"><b><h5><i class="fa fa-dashboard"></i> My Dashboard</h5></b></header>
+			<header class="container clearfix"><b><h5 class="mydashboard"><i class="fa fa-dashboard"></i>My Dashboard</h5></b></header>
 			<div class="row clearfix">
 				<div class="col-sm-12 col-m-12 col-lg-3 clearfix">
 					<div class="container color-container red">
@@ -143,6 +141,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Progress Bars -->
 			<section id="progressbars">
 				<div class="container container2">
 					<h5 class="progress-text">General Stats</h5>
@@ -175,6 +174,54 @@
 					</div>
 				</div>
 			</section>
+			<!-- Countries -->
+			<section class="countries container">
+				<h5>Countries</h5>
+				<table class="striped-table">
+					<tbody>
+						<tr>
+			        <td>United States</td>
+			        <td>65%</td>
+			      </tr>
+			      <tr>
+			        <td>UK</td>
+			        <td>15.7%</td>
+			      </tr>
+			      <tr>
+			        <td>Russia</td>
+			        <td>5.6%</td>
+			      </tr>
+			      <tr>
+			        <td>Spain</td>
+			        <td>2.1%</td>
+			      </tr>
+			      <tr>
+			        <td>India</td>
+			        <td>1.9%</td>
+			      </tr>
+			      <tr>
+			        <td>France</td>
+			        <td>1.5%</td>
+			      </tr>
+					</tbody>
+				</table>
+				<button class="dark-grey-btn">More Countries &nbsp;<i class="fa fa-arrow-right"></i></button>
+			</section>
+			<section class="alerts clearfix container">
+			<h5 class="recent-users">Recent Users</h5>
+				<div class="alert">
+				  <span class="closebtn">&times;</span>
+		        <p><img src="http://www.w3schools.com/w3images/avatar2.png" class="avatar-small">Mike</p>
+				</div>
+				<div class="alert">
+				  <span class="closebtn">&times;</span><p>
+				  	<img src="http://www.w3schools.com/w3images/avatar5.png" class="avatar-small">Jill</p>
+				  </p>
+				</div>
+				<div class="alert">
+				  <span class="closebtn">&times;</span><p><img src="http://www.w3schools.com/w3images/avatar6.png" class="avatar-small">Jane</p></p>
+				</div>
+			</section>
 		</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!--<script>
@@ -194,13 +241,41 @@
         });
 		</script>-->
 		<script>
-					    $(function(){
+		    $(function(){
             $('.inner-bar').each(function(){
                $(this).animate({
                    width: $(this).data('percent')
 							 }, 2000);
 						});
 				})
+
+		//responsive
+			function toggleSidebar() {
+			  $('button').toggleClass('');
+			  $('#light-grey').toggleClass('');
+			  $('').toggleClass('');
+			}
+
+			$('.button').on('click tap', function() {
+			  toggleResponsive();
+			});
+			$(document).keyup(function(e) {
+			  if (e.keyCode === 27) {
+			    toggleResponsive();
+			  }
+			});
+
+		//alerts
+		var close = document.getElementsByClassName("closebtn");
+		var i;
+
+		for (i = 0; i < close.length; i++) {
+		    close[i].onclick = function(){
+		        var div = this.parentElement;
+		        div.style.opacity = "0";
+		        setTimeout(function(){ div.style.display = "none"; }, 600);
+		    }
+		}	
 		</script>
 	</body>
 </html>
