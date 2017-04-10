@@ -4,8 +4,8 @@
 		<title>Analytics Template</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="stylesheet.css" type="text/css">
-		<link rel="stylesheet" href="grid-view.css">
+		<link rel="stylesheet" href="./css/stylesheet.css" type="text/css">
+		<link rel="stylesheet" href="./css/grid-view.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,7 +13,6 @@
 		<!-- Top container -->
 		<div class="top-container clearfix">
 			<span class="logo">Logo</span>
-			<button class="openbtn"></button>
 		</div>
 		<!-- Sidenav/menu -->
 		<nav class="sidenav responsive" id="mySideNav">
@@ -89,6 +88,39 @@
 			      </div>
 			   </div>
 			</div>
+			<!-- Progress Bars -->
+			<section id="progressbars">
+				<div class="container container2">
+					<h5 class="progress-text">General Stats</h5>
+					<p>New Visitors</p>
+				<div class="wrapper-column">
+					<div class="progressbar-full">
+						<div class="progress-bar">
+							<div class="inner-bar red2" data-percent="80%">80%
+							</div>
+						</div>
+						</div>
+					</div>
+					<p>New Users</p>
+					<div class="wrapper-column">
+						<div class="progressbar-full">
+						<div class="progress-bar">
+							<div class="inner-bar green" data-percent="70%">70%
+							</div>
+						</div>
+						</div>
+					</div>
+				<p>Bounce Rate</p>
+				<div class="wrapper-column margin-bottom">
+					<div class="progressbar-full">
+						<div class="progress-bar">
+							<div class="inner-bar yellow" data-percent="60%">60%
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<!-- News and Feeds -->
 			<div class="container clearfix section">
 				<div class="clearfix">
@@ -141,39 +173,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- Progress Bars -->
-			<section id="progressbars">
-				<div class="container container2">
-					<h5 class="progress-text">General Stats</h5>
-					<p>New Visitors</p>
-				<div class="wrapper-column">
-					<div class="progressbar-full">
-						<div class="progress-bar">
-							<div class="inner-bar red2" data-percent="80%">80%
-							</div>
-						</div>
-						</div>
-					</div>
-					<p>New Users</p>
-					<div class="wrapper-column">
-						<div class="progressbar-full">
-						<div class="progress-bar">
-							<div class="inner-bar green" data-percent="70%">70%
-							</div>
-						</div>
-						</div>
-					</div>
-				<p>Bounce Rate</p>
-				<div class="wrapper-column margin-bottom">
-					<div class="progressbar-full">
-						<div class="progress-bar">
-							<div class="inner-bar yellow" data-percent="60%">60%
-							</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			</section>
 			<!-- Countries -->
 			<section class="countries container">
 				<h5>Countries</h5>
@@ -216,66 +215,88 @@
 				<div class="alert">
 				  <span class="closebtn">&times;</span><p>
 				  	<img src="http://www.w3schools.com/w3images/avatar5.png" class="avatar-small">Jill</p>
-				  </p>
 				</div>
 				<div class="alert">
 				  <span class="closebtn">&times;</span><p><img src="http://www.w3schools.com/w3images/avatar6.png" class="avatar-small">Jane</p></p>
 				</div>
 			</section>
+			<!-- Comments -->
+			<section class="comments container clearfix">
+				<h5>Recent comments</h5>
+				<div class="comment-row clearfix">
+					<div class="comment-image col-sm-12 col-m-2 col-lg-2">
+						<img class="circle-large" src="http://www.w3schools.com/w3images/avatar3.png">
+					</div>
+					<div class="comment-text col-sm-12 col-m-12 col-lg-10">
+						<h4>John<span class="comment-date">Sep 29, 2016, 9:12 PM</span></h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				<div class="comment-row clearfix">
+					<div class="comment-image col-sm-12 col-m-12 col-lg-2">
+						<img class="circle-large" src="http://www.w3schools.com/w3images/avatar1.png">
+					</div>
+					<div class="comment-text col-sm-12 col-m-12 col-lg-10">
+						<h4>Chris<span class="comment-date">Feb 2, 2017, 1:05 PM</span></h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+			</section>
+			<!-- Footer -->
+			<footer class="clearfix dark-grey">
+				<div class="row">
+					<div class="col-sm-12 col-m-12 col-lg-4 column clearfix">
+						<h5 class="border-green">Demographic</h5>
+						<a href="#">Language</a>
+						<a href="#">Country</a>
+						<a href="#">City</a>
+					</div>
+					<div class="col-sm-12 col-m-12 col-lg-4 column clearfix">
+						<h5 class="border-red">System</h5>
+						<a href="#">Browser</a>
+						<a href="#">OS</a>
+						<a href="#">More</a>
+					</div>
+					<div class="col-sm-12 col-m-12 col-lg-4 column clearfix">
+						<h5 class="border-grey">Target</h5>
+						<a href="#">Users</a>
+						<a href="#">Active</a>
+						<a href="#">Geo</a>
+						<a href="#">Interests</a>
+					</div>
+				</div>
+			</footer>
+			<!-- Map -->
+			<section class="container contact">
+				<div class="clearfix">
+					<h4>Contact</h4>
+					<div class="container contact-info col-sm-12 col-m-12 col-lg-6">
+						<p>Headquarters: Mutitjulu, Australia</p><br>
+	 					<p>Customer Support number: 1-800-800-0172</p>
+	 					<div id="abc">
+						<!-- Popup Div Starts Here -->
+							<div id="popupContact">
+						<!-- Contact Us Form -->
+								<form action="#" id="form" method="post" name="form">
+							<i id="close" class="fa fa-times" aria-hidden="true" onclick="div_hide()"></i>
+								<h2>Contact Us</h2>
+								<hr>
+								<input id="name" class="name" name="name" placeholder="Name" type="text">
+								<input id="email" class="email" name="email" placeholder="Email" type="text">
+								<textarea id="msg" class="message" name="message" placeholder="Message"></textarea>
+								<a href="javascript:%20check_empty()" id="submit">Send</a>
+								</form>
+							</div>
+						<!-- Popup Div Ends Here -->
+						</div>
+	 					<button id="popup" onclick="div_show()" class="dark-grey-btn">Contact us</button>
+	 				</div>
+					<div id="map" class="col-sm-12 col-m-12 col-lg-6">We're here</div>
+				</div>
+			</section>
 		</div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEB3UixnjjkqQmiDbrY873S18EDj5FMKA&callback=initMap"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<!--<script>
-		    $(window).on("scroll", function() {
-            var innerBar = $(".inner-bar");
-            var yScroll = window.pageYOffset;
-            var position = $("#progressbars").offset().top;
-
-            if (yScroll > position - 10) {
-
-                $.each(innerBar, function(index, value) {
-                    $(this).animate({
-                        width: $(this).data("percent")
-                    }, 1500);
-                });
-            }
-        });
-		</script>-->
-		<script>
-		    $(function(){
-            $('.inner-bar').each(function(){
-               $(this).animate({
-                   width: $(this).data('percent')
-							 }, 2000);
-						});
-				})
-
-		//responsive
-			function toggleSidebar() {
-			  $('button').toggleClass('');
-			  $('#light-grey').toggleClass('');
-			  $('').toggleClass('');
-			}
-
-			$('.button').on('click tap', function() {
-			  toggleResponsive();
-			});
-			$(document).keyup(function(e) {
-			  if (e.keyCode === 27) {
-			    toggleResponsive();
-			  }
-			});
-
-		//alerts
-		var close = document.getElementsByClassName("closebtn");
-		var i;
-
-		for (i = 0; i < close.length; i++) {
-		    close[i].onclick = function(){
-		        var div = this.parentElement;
-		        div.style.opacity = "0";
-		        setTimeout(function(){ div.style.display = "none"; }, 600);
-		    }
-		}	
-		</script>
+	<script src="./javascript/script.js" type="text/javascript"></script>
 	</body>
 </html>
