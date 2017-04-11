@@ -35,10 +35,27 @@
 	float: right;
 }
 
+.openNav {
+	cursor: pointer;
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  transition: all .7s ease;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  outline: none;
+  display: none;
+}
+
+.fa-bars {
+	margin-right: 5px;
+}
+
 /* Sidenav/menu */
 
 .sidenav {
-	z-index: 3;
+	z-index: 1;
 	width: 300px;
 	height: 100%;
 	background-color: #fff;
@@ -115,7 +132,7 @@ hr {
 	padding: 10px 2px 10px 4px;
 	text-decoration: none;
 	display: inline-block;
-	background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+	background-color: .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
 }
 
 .dashboard-btn:hover {
@@ -136,26 +153,49 @@ hr {
 /* Responsive Sidenav */
 
 @media(min-width: 300px) and (max-width: 998px){
-
+	div.main {
+		margin-left: 0px;
+ 		transition: .7s;
+ 		background-color: #f1f1f1;
+	}
+	.openNav {
+		display: inline;
+	}
+	div.margin-top {
+		margin-top: 20px;
+	}
 }
 
 /* PAGE CONTENT */
 
 .main {
-	margin-top: 43px;
 	margin-left: 300px;
+	margin-top: 43px;
+	z-index: 2;
+	position: relative;
+}
+
+div.move-to-right {
+	transform: translateX(300px);
+	margin-left: 0px;
+	margin-right: 300px;
 }
 
 /* Header */
 
-.row {
-	padding: 0 8px;
+.mydashboard {
+	margin-top: 20px;
+	font-family: inherit;
 	margin-bottom: 20px;
 }
 
-.col-sm-12, .col-m-12, .col-lg-3 {
-	float: left;
+.fa-dashboard {
+	margin-right: 5px;
+}
+
+.row {
 	padding: 0 8px;
+	margin-bottom: 20px;
 }
 
 .color-container h3, .container h4 {
@@ -198,7 +238,7 @@ hr {
 /* Progress Bars */
 
 .progress-text {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	font-family: inherit;
 }
 
@@ -249,15 +289,6 @@ hr {
 
 /* News and Feeds */
 
-.mydashboard {
-	margin-top: 20px;
-	font-family: inherit;
-}
-
-.fa-dashboard {
-	margin-right: 5px;
-}
-
 .section, .section h5 {
 	margin-top: 16px;
 	font-family: inherit;
@@ -271,7 +302,7 @@ hr {
 
 .feeds {
 	display: inline-block;
-	padding-left: 15px;
+	
 	padding-right: 0;
 }
 
@@ -419,6 +450,7 @@ td {
 	border-radius: 50%;
 	border-style: none;
 	float: left;
+	margin-right: 20px;
 }
 
 .comment-date {
@@ -508,8 +540,8 @@ td {
 }
 
 #map {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 30px;
 	width: 50%;
 	height: 400px;
 	background-color: grey;
@@ -526,7 +558,7 @@ top: 0;
 left: 0;
 display: none;
 position: fixed;
-background-color: #313131;
+background-color: #616161;
 overflow: auto;
 z-index: 99;
 }
@@ -545,7 +577,7 @@ position: absolute;
 left: 50%;
 margin-left: -202px;
 font-family: inherit;
-top: 7%;
+top: 6%;
 }
 
 form {
@@ -558,7 +590,7 @@ background-color: #fff;
 }
 
 h2 {
-background-color: #FEFFED;
+background-color: #f1f1f1;
 padding: 20px 35px;
 margin: -10px -50px;
 text-align: center;
@@ -613,11 +645,12 @@ text-decoration: none;
 width: 100%;
 text-align: center;
 display: block;
-background-color: #FFBC00;
+background-color: #616161;
 color: #fff;
-border: 1px solid #FFCB00;
+border: 1px solid #616161;
 padding: 10px 0;
 font-size: 20px;
 cursor: pointer;
-border-radius: 5px;
+border-radius: 2px;
+margin-bottom: 10px;
 }

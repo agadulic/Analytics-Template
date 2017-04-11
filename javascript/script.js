@@ -1,88 +1,99 @@
-		/*
-		    $(window).on("scroll", function() {
-            var innerBar = $(".inner-bar");
-            var yScroll = window.pageYOffset;
-            var position = $("#progressbars").offset().top;
+//Open Navigation
 
-            if (yScroll > position - 10) {
+$("#openNav").click(function(){
+    $(".main").addClass('move-to-right');
+    });
 
-                $.each(innerBar, function(index, value) {
-                    $(this).animate({
-                        width: $(this).data("percent")
-                    }, 1500);
-                });
-            }
+/*
+    $(window).on("scroll", function() {
+    var innerBar = $(".inner-bar");
+    var yScroll = window.pageYOffset;
+    var position = $("#progressbars").offset().top;
+
+    if (yScroll > position - 10) {
+
+        $.each(innerBar, function(index, value) {
+            $(this).animate({
+                width: $(this).data("percent")
+            }, 1500);
         });
-		*/
+    }
+});
+*/
 
-		//progress bars
+//progress bars
 
-	    $(function(){
-        $('.inner-bar').each(function(){
-           $(this).animate({
-               width: $(this).data('percent')
-						 }, 2000);
-			});
-		})
+$(function(){
+	$('.inner-bar').each(function(){
+   		$(this).animate({
+       		width: $(this).data('percent')
+				}, 2000);
+	});
+})
 
-		//responsive
+//responsive
 
-		function toggleSidebar() {
-		  $('button').toggleClass('');
-		  $('#light-grey').toggleClass('');
-		  $('').toggleClass('');
-		}
+function toggleSidebar() {
+  $('button').toggleClass('');
+  $('#light-grey').toggleClass('');
+  $('').toggleClass('');
+}
 
-		$('.button').on('click tap', function() {
-		  toggleResponsive();
+$('.button').on('click tap', function() {
+  toggleResponsive();
+});
+$(document).keyup(function(e) {
+  if (e.keyCode === 27) {
+    toggleResponsive();
+  }
+});
+
+//alerts
+
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+}
+
+//Google Map
+
+function initMap() {
+	var uluru = {lat: -25.363, lng: 131.044};
+	var map = new google.maps.Map(document.getElementById('map'), {
+  		zoom: 4,
+  		center: uluru
 		});
-		$(document).keyup(function(e) {
-		  if (e.keyCode === 27) {
-		    toggleResponsive();
-		  }
-		});
+	var marker = new google.maps.Marker({
+  		position: uluru,
+  		map: map
+	});
+}
 
-		//alerts
+// Validating Empty Field
 
-		var close = document.getElementsByClassName("closebtn");
-		var i;
+function check_empty() {
+	if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
+		alert("Fill All Fields !");
+	} else {
+		document.getElementById('form').submit();
+		alert("Form Submitted Successfully...");
+	}
+}
 
-		for (i = 0; i < close.length; i++) {
-		    close[i].onclick = function(){
-		        var div = this.parentElement;
-		        div.style.opacity = "0";
-		        setTimeout(function(){ div.style.display = "none"; }, 600);
-		    }
-		}
+//Function To Display Popup
 
-		//Google Map
+function div_show() {
+	document.getElementById('abc').style.display = "block";
+}
 
-     	function initMap() {
-	        var uluru = {lat: -25.363, lng: 131.044};
-	        var map = new google.maps.Map(document.getElementById('map'), {
-	          zoom: 4,
-	          center: uluru
-	        });
-	        var marker = new google.maps.Marker({
-	          position: uluru,
-	          map: map
-	        });
-	    }
+//Function to Hide Popup
 
-	    // Validating Empty Field
-		function check_empty() {
-			if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
-				alert("Fill All Fields !");
-			} else {
-				document.getElementById('form').submit();
-				alert("Form Submitted Successfully...");
-			}
-		}
-		//Function To Display Popup
-		function div_show() {
-			document.getElementById('abc').style.display = "block";
-		}
-		//Function to Hide Popup
-		function div_hide(){
-			document.getElementById('abc').style.display = "none";
-		}
+function div_hide(){
+	document.getElementById('abc').style.display = "none";
+}
