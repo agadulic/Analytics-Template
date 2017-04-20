@@ -2,7 +2,7 @@
 
 $("#openNav").click(function(){
     $(".main").addClass('move-to-right');
-    });
+});
 
 /*
     $(window).on("scroll", function() {
